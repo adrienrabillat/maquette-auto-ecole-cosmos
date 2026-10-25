@@ -1,0 +1,260 @@
+/* ============================================
+   AUTO-ÉCOLE COSMOS — GLOBAL STYLES
+   Light Professional Design
+   Brand Colors from logo:
+   - Green:       #8AB73B (primary)
+   - Green dark:  #739C2E (hover)
+   - Charcoal:    #2D3436 (text)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Brand Colors */
+  --cosmos-green: #8AB73B;
+  --cosmos-green-dark: #739C2E;
+  --cosmos-green-light: #A3CE5A;
+  --cosmos-green-subtle: rgba(138, 183, 59, 0.08);
+  --cosmos-green-hover: #739C2E;
+  --cosmos-charcoal: #2D3436;
+  --cosmos-dark: #1A1A2E;
+  --cosmos-bg: #FFFFFF;
+  --cosmos-bg-alt: #F5F7F0;
+  --cosmos-text: #2D3436;
+  --cosmos-text-light: #636E72;
+  --cosmos-text-muted: #B2BEC3;
+  --cosmos-white: #FFFFFF;
+  --cosmos-border: #E8ECE0;
+  --cosmos-card-bg: #FFFFFF;
+  --cosmos-card-border: #E8ECE0;
+  --cosmos-card-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+
+  /* Typography */
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --section-padding: 100px 0;
+  --container-width: 1200px;
+  --container-padding: 0 24px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cosmos-bg);
+  color: var(--cosmos-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.section {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--cosmos-charcoal);
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.3;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--cosmos-text-light);
+}
+
+.text-green {
+  color: var(--cosmos-green);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--cosmos-green);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(138, 183, 59, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--cosmos-green-dark);
+  box-shadow: 0 6px 20px rgba(138, 183, 59, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid var(--cosmos-green);
+  color: var(--cosmos-green);
+}
+
+.btn-outline:hover {
+  background: var(--cosmos-green);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+  background: var(--cosmos-card-bg);
+  border: 1px solid var(--cosmos-card-border);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: var(--cosmos-card-shadow);
+  transition: all var(--transition-smooth);
+}
+
+.card:hover {
+  border-color: var(--cosmos-green);
+  box-shadow: 0 8px 30px rgba(138, 183, 59, 0.12);
+  transform: translateY(-4px);
+}
+
+/* ============================================
+   STARS (for reviews)
+   ============================================ */
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: #fbbf24;
+}
+
+.star-empty {
+  color: #ddd;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cosmos-green);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 0;
+  }
+  
+  .btn {
+    padding: 14px 24px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 48px 0;
+  }
+}
