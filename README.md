@@ -1,8 +1,16 @@
-# 🟢 Auto-École Cosmos — Site Web
+# Maquette — Auto-école Cosmos (Levallois-Perret)
 
-Site web officiel de l'Auto-École Cosmos à Levallois-Perret.
+Proposition de refonte du site d'une auto-école. **Maquette non officielle**, réalisée de ma propre initiative : le site n'est pas indexé par les moteurs de recherche.
 
-## 🚀 Installation
+**Démo** : https://maquette-auto-ecole-cosmos.vercel.app
+
+![Aperçu](docs/apercu.jpg)
+
+Six pages (accueil, formations, permis auto, permis moto, avis, contact), balises SEO par page et données structurées JSON-LD.
+
+Stack : React 18, React Router, Framer Motion (Create React App).
+
+## Lancer en local
 
 ```bash
 # 1. Installer les dépendances
@@ -15,7 +23,7 @@ npm start
 npm run build
 ```
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 cosmos-site/
@@ -45,7 +53,7 @@ cosmos-site/
 └── package.json
 ```
 
-## 🎨 Identité visuelle
+## Identité visuelle
 
 Couleurs extraites directement de la devanture Cosmos :
 - **Vert néon** : `#10b010` (couleur principale du logo)
@@ -57,7 +65,7 @@ Typographies :
 - **Orbitron** — Titres (réfère au style futuriste/spatial du nom "Cosmos")
 - **Outfit** — Corps de texte (moderne et lisible)
 
-## 📱 Pages
+## Pages
 
 1. **Accueil** — Hero, statistiques, aperçu formations, avis, CTA
 2. **Formations** — Catalogue complet (Auto, Moto, Code)
@@ -66,7 +74,7 @@ Typographies :
 5. **Avis** — Tous les avis Google avec filtres
 6. **Contact** — Formulaire, coordonnées, horaires, plan
 
-## 🔍 SEO
+## SEO
 
 - Balises meta Open Graph & Twitter Card
 - Données structurées JSON-LD (DrivingSchool)
@@ -74,10 +82,3 @@ Typographies :
 - Robots.txt
 - Balises canoniques par page
 - Données géographiques (geo meta tags)
-
-## 📞 Informations
-
-- **Adresse** : 107 rue du Président Wilson, 92300 Levallois-Perret
-- **Téléphone** : 01 47 39 11 04
-- **Email** : cosmoslevallois@gmail.com
-- **Site** : www.auto-moto-ecole-idf.fr
